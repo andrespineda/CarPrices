@@ -1,5 +1,10 @@
 # Practical Application Assignment 11.1: What Drives the Price of a Car?
 
+## Location of Jupyter Notebook:
+The corresponding Jupyter Notebook thatthat was used to analyze the dataset and create the following charts is located in Github at the following location:
+
+https://github.com/andrespineda/CarPrices
+
 ## Background
 
 As part of the UC Berkeley Professional Certificate in Machine Learning
@@ -190,6 +195,19 @@ alt="Price Distribution Chart" />
 
 These insights from the box plot can be valuable for understanding the factors that influence car prices and can inform the feature selection and engineering process in machine learning model development. By identifying the features with the most significant impact on price, we can prioritize these for inclusion in the model to improve its predictive accuracy. Additionally, understanding the distribution of prices can help in detecting outliers and in transforming features to better capture the underlying patterns in the data.
 
+## Correlation Heatmap
+
+<img src="./media/Correlation Heatmap.png" style="width:3.54526in;height:3.55in"
+alt="Price Distribution Chart" />
+The heatmap displays correlation coefficients ranging from -1 to 1. Values close to 1 or -1 indicate strong positive or negative correlations, respectively, while values close to 0 indicate a weak or no linear correlation. Price is the target variable and is the diagonal values = 1. There are several that show near perfect correlation,  indicating that they are likely representing the same or very similar models and could be redundant in the dataset, for example "model_grand and model_l-100."
+Other than those, the highest are:
+* model_accord: This feature has a correlation of 0.23 with the target variable 'price'.
+* model_camry: This feature has a correlation of 0.23 with 'price'.
+* odometer_range: This feature has a correlation of 0.22 with 'price'.
+* model_civic: This feature has a correlation of 0.22 with 'price'.
+* model_altima: This feature has a correlation of 0.22 with 'price'.
+
+
 ## Modeling
 After reviewing the data, several models were created to determine the impact of the various features in the dataset on the price. Several regression models were created and tested.
 The following types of models were tested:
@@ -256,13 +274,11 @@ alt="Model Scores" />
 
 This Jupyter Notebook provides an analysis of various factors that influence used car prices, which is essential for a used car dealership to understand consumer preferences and inform pricing strategy. The analysis includes data cleaning and preprocessing to ensure the dataset's quality for reliable insights.
 
+The Price Distribution plot shows a right-skewed distribution with a peak to the left of the mean price, suggesting that while most cars are priced around the mean, there is a significant number of higher-priced cars, possibly luxury or high-performance vehicles. The long tail towards higher prices indicates a smaller cluster of higher-priced cars.
+
 From the box plot analysis, it is evident that the distribution of car prices varies significantly across different features such as manufacturer, model, condition, transmission, drive, size, cylinders, type, color, area, and odometer range. For instance, cars from certain manufacturers have a wider price range, indicating a diverse market segment. Similarly, the condition of a car affects its price, with cars in excellent condition having a higher median price. The type of transmission also influences the price, with automatic cars having a wider distribution, possibly due to higher demand or more features.
 
-The evaluation of model scores reveals that the RandomForestRegressor_baseline model is the most effective for predicting car prices, with the highest test score and R2 value, and relatively low test RMSE and MAE. In contrast, the Lasso_baseline and LinearRegression_baseline models perform poorly, with negative R2 values on the test set.The degree 2 polynomial model is marginally better than the degree 3 model, but both show signs of poor performance relative to the Random Forest Model.
-
-The Feature Importance Plot indicates that the year of the vehicle is the most significant predictor of price, followed by the manufacturer and odometer range. Other features like the model, drive, cylinders, transmission, and condition also contribute to the prediction but to a lesser extent.
-
-The Price Distribution plot shows a right-skewed distribution with a peak to the left of the mean price, suggesting that while most cars are priced around the mean, there is a significant number of higher-priced cars, possibly luxury or high-performance vehicles. The long tail towards higher prices indicates a smaller cluster of higher-priced cars.
+Based on these metrics, the Ridge Regression models (Ridge_kfold) perform slightly better than the Lasso and Linear Regression models. They have the highest Test Scores and Test R2 values, which suggests they are better at generalizing to unseen data. The consistency across the folds also indicates that the Ridge models are stable.
 
 In conclusion, the analysis provides valuable insights into the factors that influence car prices and highlights the importance of selecting features with higher importance for better sales predictions.
 
