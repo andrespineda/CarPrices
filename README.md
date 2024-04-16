@@ -233,11 +233,11 @@ Although the performance metrics between the models are relatively small, the Ri
 
 In Addition to the Linear Regression Models, second and third degreee models were also evalauated:
 
-  \-MSE (degree 2): 9.840996747761279e+20
-  \-R-squared (degree 2): -3.2826279095430986e+22
+  * MSE (degree 2): 9.840996747761279e+20
+  * R-squared (degree 2): -3.2826279095430986e+22
 
-  \-MSE (degree 3): 4.000255226230118e+20
-  \-R-squared (degree 3): -1.3343515690019781e+22
+  * MSE (degree 3): 4.000255226230118e+20
+  * R-squared (degree 3): -1.3343515690019781e+22
 
 #### Polynomial Model Comparison
 ##### MSE
