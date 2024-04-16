@@ -123,12 +123,14 @@ The distribution appears to be right-skewed, with a long tail extending towards 
 
 The plot does not show a clear indication of a bimodal distribution, which would be characterized by two distinct peaks. Instead, there is one clear peak and a gradual decline in density as the price increases. The presence of a long tail towards the higher prices suggests that there are  a smaller cluster of higher-priced cars.
 
-## INSERT AVERAGE PRICE CHART HERE
+<img src="./media/average price.png" style="width:3.54526in;height:3.55in"
+alt="Average Price Chart" />
 
 ### Violin Plot
 A Violin Plot is a visual tool that displays the price distribution of each feature in the dataset. The shape of the violin is determined by the variation of prices that are in the dataset for that feature as it relates to the price of the car.
 
-![## INSERT VIOLIN CHART HERE](https://)
+<img src="./media/Violin Plots of All Features.png" style="width:3.54526in;height:3.55in"
+alt="Violin Chart" />
 
 From the violin plot, we can infer the following conclusions about the distribution of car prices with respect to different features:
 ##### Manufacturer:
@@ -159,7 +161,10 @@ Further analysis will determine which features have the most impact on car price
 
 ### Box Plot
 ### Box Plot Analysis
-From the box plot, we can infer the following conclusions about the distribution of car prices with respect to different features:
+From the box plot, we can infer the following conclusions about the distribution of car prices with respect to different features
+
+<img src="./media/Price_Distribution_by_Feature.png" style="width:3.54526in;height:3.55in"
+alt="Price Distribution Chart" />
 #### Manufacturer:
  There is variation in price distribution among different manufacturers. Some manufacturers have a wider range of prices, while others have a more concentrated distribution, indicating that certain manufacturers may cater to different market segments.
 #### Model:
@@ -202,7 +207,8 @@ Also, Cross Validation techniques were used to verify the models and to determin
 
 After the modeling, we evaluatede the R2 and MSE to determine the best model that can be used to predict car prices.
 
-### INSERT MODEL RESULTS HERE
+<img src="./media/Model scores.png" style="width:3.54526in;height:3.55in"
+alt="Model Scores" />
 
  ### Evaluation of Model Scores
  To determine the best model, we should look for the one with the highest Test Score and Test R2, and the lowest Test RMSE and Test MAE, as these metrics indicate the model's performance on unseen data (the test set).
@@ -239,8 +245,12 @@ The Degree 2 polynomial model has a slightly lower MSE than the Degree 3 model, 
 ##### R2
 The Degree 2 model also has a less negative R2 value compared to the Degree 3 model, suggesting it does a slightly less poor job of explaining the variance in the dependent variable.
 
-#### Conclusion
+#### Summary
 The Degree 2 polynomial model is marginally better than the Degree 3 model. However, both models exhibit signs of poor performance, and indicate that a Polynomial model is not the best model for predictions of this dataset.
+
+### Feature Importance
+<img src="./media/Feature Importance.png" style="width:3.54526in;height:3.55in"
+alt="Model Scores" />
 
 ## Findings
 
